@@ -4,7 +4,7 @@ export interface SolofoCapacitorSocketPlugin {
 
   Open(option: SocketOption): void;
 
-  addListener(eventName: 'socketListner', listenerFunc: socketOpenedListener): Promise<PluginListenerHandle> & PluginListenerHandle;
+  addListener(eventName: 'socketListner', listenerFunc: socketOpenedListener): PluginListenerHandle;
 }
 
 export interface SocketOption{

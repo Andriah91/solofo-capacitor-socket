@@ -25,7 +25,7 @@
       },
       {
         "name": "addListener",
-        "signature": "(eventName: 'socketListner', listenerFunc: socketOpenedListener) => Promise<PluginListenerHandle> & PluginListenerHandle",
+        "signature": "(eventName: 'socketListner', listenerFunc: socketOpenedListener) => PluginListenerHandle",
         "parameters": [
           {
             "name": "eventName",
@@ -38,7 +38,7 @@
             "type": "socketOpenedListener"
           }
         ],
-        "returns": "Promise<PluginListenerHandle> & PluginListenerHandle",
+        "returns": "PluginListenerHandle",
         "tags": [],
         "docs": "",
         "complexTypes": [

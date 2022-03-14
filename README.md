@@ -39,7 +39,7 @@ Open(option: SocketOption) => void
 ### addListener('socketListner', ...)
 
 ```typescript
-addListener(eventName: 'socketListner', listenerFunc: socketOpenedListener) => Promise<PluginListenerHandle> & PluginListenerHandle
+addListener(eventName: 'socketListner', listenerFunc: socketOpenedListener) => PluginListenerHandle
 ```
 
 | Param              | Type                                                                  |
@@ -47,7 +47,7 @@ addListener(eventName: 'socketListner', listenerFunc: socketOpenedListener) => P
 | **`eventName`**    | <code>'socketListner'</code>                                          |
 | **`listenerFunc`** | <code><a href="#socketopenedlistener">socketOpenedListener</a></code> |
 
-**Returns:** <code>Promise&lt;<a href="#pluginlistenerhandle">PluginListenerHandle</a>&gt; & <a href="#pluginlistenerhandle">PluginListenerHandle</a></code>
+**Returns:** <code><a href="#pluginlistenerhandle">PluginListenerHandle</a></code>
 
 --------------------
 
