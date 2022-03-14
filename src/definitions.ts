@@ -1,3 +1,13 @@
+import type { PluginListenerHandle } from '@capacitor/core';
+export declare type socketOpenedListener = (resultScan: any) => void;
 export interface SolofoCapacitorSocketPlugin {
-  echo(options: { value: string }): Promise<{ value: string }>;
+
+  Open(option: SocketOption): void;
+
+  addListener(eventName: 'socketListner', listenerFunc: socketOpenedListener): Promise<PluginListenerHandle> & PluginListenerHandle;
+}
+
+export interface SocketOption{
+  host: string,
+  port: number
 }
