@@ -25,12 +25,12 @@
       },
       {
         "name": "addListener",
-        "signature": "(eventName: 'socketListner', listenerFunc: socketOpenedListener) => PluginListenerHandle",
+        "signature": "(eventName: 'socketListnerSucces', listenerFunc: socketOpenedListener) => PluginListenerHandle",
         "parameters": [
           {
             "name": "eventName",
             "docs": "",
-            "type": "'socketListner'"
+            "type": "'socketListnerSucces'"
           },
           {
             "name": "listenerFunc",
@@ -45,7 +45,31 @@
           "PluginListenerHandle",
           "socketOpenedListener"
         ],
-        "slug": "addlistenersocketlistner"
+        "slug": "addlistenersocketlistnersucces"
+      },
+      {
+        "name": "addListener",
+        "signature": "(eventName: 'socketListnerError', listenerFunc: socketOpenedListener) => PluginListenerHandle",
+        "parameters": [
+          {
+            "name": "eventName",
+            "docs": "",
+            "type": "'socketListnerError'"
+          },
+          {
+            "name": "listenerFunc",
+            "docs": "",
+            "type": "socketOpenedListener"
+          }
+        ],
+        "returns": "PluginListenerHandle",
+        "tags": [],
+        "docs": "",
+        "complexTypes": [
+          "PluginListenerHandle",
+          "socketOpenedListener"
+        ],
+        "slug": "addlistenersocketlistnererror"
       }
     ],
     "properties": []
