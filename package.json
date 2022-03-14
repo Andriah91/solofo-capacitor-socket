@@ -1,6 +1,6 @@
 {
   "name": "solofo-capacitor-socket",
-  "version": "0.0.7",
+  "version": "0.0.9",
   "description": "Capacitor socket plugin",
   "main": "dist/plugin.cjs.js",
   "module": "dist/esm/index.js",
