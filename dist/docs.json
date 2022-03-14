@@ -1,0 +1,109 @@
+{
+  "api": {
+    "name": "SolofoCapacitorSocketPlugin",
+    "slug": "solofocapacitorsocketplugin",
+    "docs": "",
+    "tags": [],
+    "methods": [
+      {
+        "name": "Open",
+        "signature": "(option: SocketOption) => void",
+        "parameters": [
+          {
+            "name": "option",
+            "docs": "",
+            "type": "SocketOption"
+          }
+        ],
+        "returns": "void",
+        "tags": [],
+        "docs": "",
+        "complexTypes": [
+          "SocketOption"
+        ],
+        "slug": "open"
+      },
+      {
+        "name": "addListener",
+        "signature": "(eventName: 'socketListner', listenerFunc: socketOpenedListener) => Promise<PluginListenerHandle> & PluginListenerHandle",
+        "parameters": [
+          {
+            "name": "eventName",
+            "docs": "",
+            "type": "'socketListner'"
+          },
+          {
+            "name": "listenerFunc",
+            "docs": "",
+            "type": "socketOpenedListener"
+          }
+        ],
+        "returns": "Promise<PluginListenerHandle> & PluginListenerHandle",
+        "tags": [],
+        "docs": "",
+        "complexTypes": [
+          "PluginListenerHandle",
+          "socketOpenedListener"
+        ],
+        "slug": "addlistenersocketlistner"
+      }
+    ],
+    "properties": []
+  },
+  "interfaces": [
+    {
+      "name": "SocketOption",
+      "slug": "socketoption",
+      "docs": "",
+      "tags": [],
+      "methods": [],
+      "properties": [
+        {
+          "name": "host",
+          "tags": [],
+          "docs": "",
+          "complexTypes": [],
+          "type": "string"
+        },
+        {
+          "name": "port",
+          "tags": [],
+          "docs": "",
+          "complexTypes": [],
+          "type": "number"
+        }
+      ]
+    },
+    {
+      "name": "PluginListenerHandle",
+      "slug": "pluginlistenerhandle",
+      "docs": "",
+      "tags": [],
+      "methods": [],
+      "properties": [
+        {
+          "name": "remove",
+          "tags": [],
+          "docs": "",
+          "complexTypes": [],
+          "type": "() => Promise<void>"
+        }
+      ]
+    }
+  ],
+  "enums": [],
+  "typeAliases": [
+    {
+      "name": "socketOpenedListener",
+      "slug": "socketopenedlistener",
+      "docs": "",
+      "types": [
+        {
+          "text": "(resultScan: any): void",
+          "complexTypes": []
+        }
+      ]
+    }
+  ],
+  "pluginConfigs": []
+}
