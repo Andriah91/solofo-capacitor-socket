@@ -19,10 +19,9 @@ public class SolofoCapacitorSocketPlugin extends Plugin {
         Integer port = call.getInt("port");
 
         try {
-            Socket socketClient = new Socket("51.75.128.130", 10101);
+            Socket socketClient = new Socket(host, port);
             System.out.println("Client: " + "Connection Established");
-            BufferedReader reader =
-                    new BufferedReader(new InputStreamReader(socketClient.getInputStream()));
+            BufferedReader reader = new BufferedReader(new InputStreamReader(socketClient.getInputStream()));
             String serverMsg;
             while ((serverMsg = reader.readLine()) != null) {
                 System.out.println("Client: " + serverMsg);
