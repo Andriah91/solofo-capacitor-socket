@@ -25,7 +25,7 @@
       },
       {
         "name": "addListener",
-        "signature": "(eventName: 'socketListnerSuccess', listenerFunc: socketListnerSuccess) => PluginListenerHandle",
+        "signature": "(eventName: 'socketListnerSuccess', listenerFunc: socketListnerSuccess) => Promise<PluginListenerHandle>",
         "parameters": [
           {
             "name": "eventName",
@@ -38,7 +38,7 @@
             "type": "socketListnerSuccess"
           }
         ],
-        "returns": "PluginListenerHandle",
+        "returns": "Promise<PluginListenerHandle>",
         "tags": [],
         "docs": "",
         "complexTypes": [
@@ -49,7 +49,7 @@
       },
       {
         "name": "addListener",
-        "signature": "(eventName: 'socketListnerError', listenerFunc: socketListnerError) => PluginListenerHandle",
+        "signature": "(eventName: 'socketListnerError', listenerFunc: socketListnerError) => Promise<PluginListenerHandle>",
         "parameters": [
           {
             "name": "eventName",
@@ -62,7 +62,7 @@
             "type": "socketListnerError"
           }
         ],
-        "returns": "PluginListenerHandle",
+        "returns": "Promise<PluginListenerHandle>",
         "tags": [],
         "docs": "",
         "complexTypes": [

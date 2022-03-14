@@ -40,7 +40,7 @@ Open(option: SocketOption) => void
 ### addListener('socketListnerSuccess', ...)
 
 ```typescript
-addListener(eventName: 'socketListnerSuccess', listenerFunc: socketListnerSuccess) => PluginListenerHandle
+addListener(eventName: 'socketListnerSuccess', listenerFunc: socketListnerSuccess) => Promise<PluginListenerHandle>
 ```
 
 | Param              | Type                                                                    |
@@ -48,7 +48,7 @@ addListener(eventName: 'socketListnerSuccess', listenerFunc: socketListnerSucces
 | **`eventName`**    | <code>'<a href="#socketlistnersuccess">socketListnerSuccess</a>'</code> |
 | **`listenerFunc`** | <code><a href="#socketlistnersuccess">socketListnerSuccess</a></code>   |
 
-**Returns:** <code><a href="#pluginlistenerhandle">PluginListenerHandle</a></code>
+**Returns:** <code>Promise&lt;<a href="#pluginlistenerhandle">PluginListenerHandle</a>&gt;</code>
 
 --------------------
 
@@ -56,7 +56,7 @@ addListener(eventName: 'socketListnerSuccess', listenerFunc: socketListnerSucces
 ### addListener('socketListnerError', ...)
 
 ```typescript
-addListener(eventName: 'socketListnerError', listenerFunc: socketListnerError) => PluginListenerHandle
+addListener(eventName: 'socketListnerError', listenerFunc: socketListnerError) => Promise<PluginListenerHandle>
 ```
 
 | Param              | Type                                                                |
@@ -64,7 +64,7 @@ addListener(eventName: 'socketListnerError', listenerFunc: socketListnerError) =
 | **`eventName`**    | <code>'<a href="#socketlistnererror">socketListnerError</a>'</code> |
 | **`listenerFunc`** | <code><a href="#socketlistnererror">socketListnerError</a></code>   |
 
-**Returns:** <code><a href="#pluginlistenerhandle">PluginListenerHandle</a></code>
+**Returns:** <code>Promise&lt;<a href="#pluginlistenerhandle">PluginListenerHandle</a>&gt;</code>
 
 --------------------
 
