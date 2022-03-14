@@ -25,17 +25,17 @@
       },
       {
         "name": "addListener",
-        "signature": "(eventName: 'socketListnerSucces', listenerFunc: socketOpenedListener) => PluginListenerHandle",
+        "signature": "(eventName: 'socketListnerSuccess', listenerFunc: socketListnerSuccess) => PluginListenerHandle",
         "parameters": [
           {
             "name": "eventName",
             "docs": "",
-            "type": "'socketListnerSucces'"
+            "type": "'socketListnerSuccess'"
           },
           {
             "name": "listenerFunc",
             "docs": "",
-            "type": "socketOpenedListener"
+            "type": "socketListnerSuccess"
           }
         ],
         "returns": "PluginListenerHandle",
@@ -43,13 +43,13 @@
         "docs": "",
         "complexTypes": [
           "PluginListenerHandle",
-          "socketOpenedListener"
+          "socketListnerSuccess"
         ],
-        "slug": "addlistenersocketlistnersucces"
+        "slug": "addlistenersocketlistnersuccess"
       },
       {
         "name": "addListener",
-        "signature": "(eventName: 'socketListnerError', listenerFunc: socketOpenedListener) => PluginListenerHandle",
+        "signature": "(eventName: 'socketListnerError', listenerFunc: socketListnerError) => PluginListenerHandle",
         "parameters": [
           {
             "name": "eventName",
@@ -59,7 +59,7 @@
           {
             "name": "listenerFunc",
             "docs": "",
-            "type": "socketOpenedListener"
+            "type": "socketListnerError"
           }
         ],
         "returns": "PluginListenerHandle",
@@ -67,7 +67,7 @@
         "docs": "",
         "complexTypes": [
           "PluginListenerHandle",
-          "socketOpenedListener"
+          "socketListnerError"
         ],
         "slug": "addlistenersocketlistnererror"
       }
@@ -118,8 +118,19 @@
   "enums": [],
   "typeAliases": [
     {
-      "name": "socketOpenedListener",
-      "slug": "socketopenedlistener",
+      "name": "socketListnerSuccess",
+      "slug": "socketlistnersuccess",
+      "docs": "",
+      "types": [
+        {
+          "text": "(resultScan: any): void",
+          "complexTypes": []
+        }
+      ]
+    },
+    {
+      "name": "socketListnerError",
+      "slug": "socketlistnererror",
       "docs": "",
       "types": [
         {

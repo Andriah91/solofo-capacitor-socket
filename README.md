@@ -14,7 +14,7 @@ npx cap sync
 <docgen-index>
 
 * [`Open(...)`](#open)
-* [`addListener('socketListnerSucces', ...)`](#addlistenersocketlistnersucces)
+* [`addListener('socketListnerSuccess', ...)`](#addlistenersocketlistnersuccess)
 * [`addListener('socketListnerError', ...)`](#addlistenersocketlistnererror)
 * [Interfaces](#interfaces)
 * [Type Aliases](#type-aliases)
@@ -37,16 +37,16 @@ Open(option: SocketOption) => void
 --------------------
 
 
-### addListener('socketListnerSucces', ...)
+### addListener('socketListnerSuccess', ...)
 
 ```typescript
-addListener(eventName: 'socketListnerSucces', listenerFunc: socketOpenedListener) => PluginListenerHandle
+addListener(eventName: 'socketListnerSuccess', listenerFunc: socketListnerSuccess) => PluginListenerHandle
 ```
 
-| Param              | Type                                                                  |
-| ------------------ | --------------------------------------------------------------------- |
-| **`eventName`**    | <code>'socketListnerSucces'</code>                                    |
-| **`listenerFunc`** | <code><a href="#socketopenedlistener">socketOpenedListener</a></code> |
+| Param              | Type                                                                    |
+| ------------------ | ----------------------------------------------------------------------- |
+| **`eventName`**    | <code>'<a href="#socketlistnersuccess">socketListnerSuccess</a>'</code> |
+| **`listenerFunc`** | <code><a href="#socketlistnersuccess">socketListnerSuccess</a></code>   |
 
 **Returns:** <code><a href="#pluginlistenerhandle">PluginListenerHandle</a></code>
 
@@ -56,13 +56,13 @@ addListener(eventName: 'socketListnerSucces', listenerFunc: socketOpenedListener
 ### addListener('socketListnerError', ...)
 
 ```typescript
-addListener(eventName: 'socketListnerError', listenerFunc: socketOpenedListener) => PluginListenerHandle
+addListener(eventName: 'socketListnerError', listenerFunc: socketListnerError) => PluginListenerHandle
 ```
 
-| Param              | Type                                                                  |
-| ------------------ | --------------------------------------------------------------------- |
-| **`eventName`**    | <code>'socketListnerError'</code>                                     |
-| **`listenerFunc`** | <code><a href="#socketopenedlistener">socketOpenedListener</a></code> |
+| Param              | Type                                                                |
+| ------------------ | ------------------------------------------------------------------- |
+| **`eventName`**    | <code>'<a href="#socketlistnererror">socketListnerError</a>'</code> |
+| **`listenerFunc`** | <code><a href="#socketlistnererror">socketListnerError</a></code>   |
 
 **Returns:** <code><a href="#pluginlistenerhandle">PluginListenerHandle</a></code>
 
@@ -90,7 +90,12 @@ addListener(eventName: 'socketListnerError', listenerFunc: socketOpenedListener)
 ### Type Aliases
 
 
-#### socketOpenedListener
+#### socketListnerSuccess
+
+<code>(resultScan: any): void</code>
+
+
+#### socketListnerError
 
 <code>(resultScan: any): void</code>
 
