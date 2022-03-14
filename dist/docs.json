@@ -6,7 +6,7 @@
     "tags": [],
     "methods": [
       {
-        "name": "Open",
+        "name": "open",
         "signature": "(option: SocketOption) => void",
         "parameters": [
           {
@@ -22,6 +22,16 @@
           "SocketOption"
         ],
         "slug": "open"
+      },
+      {
+        "name": "close",
+        "signature": "() => void",
+        "parameters": [],
+        "returns": "void",
+        "tags": [],
+        "docs": "",
+        "complexTypes": [],
+        "slug": "close"
       },
       {
         "name": "addListener",
@@ -70,30 +80,6 @@
           "SocketErrorListner"
         ],
         "slug": "addlistenersocketerrorlistner"
-      },
-      {
-        "name": "addListener",
-        "signature": "(eventName: 'SocketOpnedListner', listenerFunc: SocketErrorListner) => Promise<PluginListenerHandle>",
-        "parameters": [
-          {
-            "name": "eventName",
-            "docs": "",
-            "type": "'SocketOpnedListner'"
-          },
-          {
-            "name": "listenerFunc",
-            "docs": "",
-            "type": "SocketErrorListner"
-          }
-        ],
-        "returns": "Promise<PluginListenerHandle>",
-        "tags": [],
-        "docs": "",
-        "complexTypes": [
-          "PluginListenerHandle",
-          "SocketErrorListner"
-        ],
-        "slug": "addlistenersocketopnedlistner"
       }
     ],
     "properties": []
@@ -137,6 +123,36 @@
           "type": "() => Promise<void>"
         }
       ]
+    },
+    {
+      "name": "NMEA_GGA",
+      "slug": "nmea_gga",
+      "docs": "",
+      "tags": [],
+      "methods": [],
+      "properties": [
+        {
+          "name": "Z_EGM_GGA",
+          "tags": [],
+          "docs": "",
+          "complexTypes": [],
+          "type": "number"
+        },
+        {
+          "name": "N_EGM_GGA",
+          "tags": [],
+          "docs": "",
+          "complexTypes": [],
+          "type": "number"
+        },
+        {
+          "name": "POS",
+          "tags": [],
+          "docs": "",
+          "complexTypes": [],
+          "type": "number"
+        }
+      ]
     }
   ],
   "enums": [],
@@ -147,8 +163,10 @@
       "docs": "",
       "types": [
         {
-          "text": "(resultScan: any): void",
-          "complexTypes": []
+          "text": "(NMEA_GGA: NMEA_GGA): void",
+          "complexTypes": [
+            "NMEA_GGA"
+          ]
         }
       ]
     },
@@ -158,7 +176,7 @@
       "docs": "",
       "types": [
         {
-          "text": "(resultScan: any): void",
+          "text": "(error: any): void",
           "complexTypes": []
         }
       ]

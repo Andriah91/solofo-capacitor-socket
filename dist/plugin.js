@@ -6,8 +6,12 @@ var capacitorSolofoCapacitorSocket = (function (exports, core) {
     });
 
     class SolofoCapacitorSocketWeb extends core.WebPlugin {
-        Open(option) {
+        open(option) {
             console.log(option);
+            throw new Error('Method not implemented.');
+        }
+        close() {
+            throw new Error('Method not implemented.');
         }
     }
 

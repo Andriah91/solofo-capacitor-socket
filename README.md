@@ -13,10 +13,10 @@ npx cap sync
 
 <docgen-index>
 
-* [`Open(...)`](#open)
+* [`open(...)`](#open)
+* [`close()`](#close)
 * [`addListener('SocketSuccessListner', ...)`](#addlistenersocketsuccesslistner)
 * [`addListener('SocketErrorListner', ...)`](#addlistenersocketerrorlistner)
-* [`addListener('SocketOpnedListner', ...)`](#addlistenersocketopnedlistner)
 * [Interfaces](#interfaces)
 * [Type Aliases](#type-aliases)
 
@@ -25,15 +25,24 @@ npx cap sync
 <docgen-api>
 <!--Update the source file JSDoc comments and rerun docgen to update the docs below-->
 
-### Open(...)
+### open(...)
 
 ```typescript
-Open(option: SocketOption) => void
+open(option: SocketOption) => void
 ```
 
 | Param        | Type                                                  |
 | ------------ | ----------------------------------------------------- |
 | **`option`** | <code><a href="#socketoption">SocketOption</a></code> |
+
+--------------------
+
+
+### close()
+
+```typescript
+close() => void
+```
 
 --------------------
 
@@ -70,22 +79,6 @@ addListener(eventName: 'SocketErrorListner', listenerFunc: SocketErrorListner) =
 --------------------
 
 
-### addListener('SocketOpnedListner', ...)
-
-```typescript
-addListener(eventName: 'SocketOpnedListner', listenerFunc: SocketErrorListner) => Promise<PluginListenerHandle>
-```
-
-| Param              | Type                                                              |
-| ------------------ | ----------------------------------------------------------------- |
-| **`eventName`**    | <code>'SocketOpnedListner'</code>                                 |
-| **`listenerFunc`** | <code><a href="#socketerrorlistner">SocketErrorListner</a></code> |
-
-**Returns:** <code>Promise&lt;<a href="#pluginlistenerhandle">PluginListenerHandle</a>&gt;</code>
-
---------------------
-
-
 ### Interfaces
 
 
@@ -104,16 +97,25 @@ addListener(eventName: 'SocketOpnedListner', listenerFunc: SocketErrorListner) =
 | **`remove`** | <code>() =&gt; Promise&lt;void&gt;</code> |
 
 
+#### NMEA_GGA
+
+| Prop            | Type                |
+| --------------- | ------------------- |
+| **`Z_EGM_GGA`** | <code>number</code> |
+| **`N_EGM_GGA`** | <code>number</code> |
+| **`POS`**       | <code>number</code> |
+
+
 ### Type Aliases
 
 
 #### SocketSuccessListner
 
-<code>(resultScan: any): void</code>
+<code>(<a href="#nmea_gga">NMEA_GGA</a>: <a href="#nmea_gga">NMEA_GGA</a>): void</code>
 
 
 #### SocketErrorListner
 
-<code>(resultScan: any): void</code>
+<code>(error: any): void</code>
 
 </docgen-api>
