@@ -25,17 +25,17 @@
       },
       {
         "name": "addListener",
-        "signature": "(eventName: 'socketListnerSuccess', listenerFunc: socketListnerSuccess) => Promise<PluginListenerHandle>",
+        "signature": "(eventName: 'SocketSuccessListner', listenerFunc: SocketSuccessListner) => Promise<PluginListenerHandle>",
         "parameters": [
           {
             "name": "eventName",
             "docs": "",
-            "type": "'socketListnerSuccess'"
+            "type": "'SocketSuccessListner'"
           },
           {
             "name": "listenerFunc",
             "docs": "",
-            "type": "socketListnerSuccess"
+            "type": "SocketSuccessListner"
           }
         ],
         "returns": "Promise<PluginListenerHandle>",
@@ -43,23 +43,23 @@
         "docs": "",
         "complexTypes": [
           "PluginListenerHandle",
-          "socketListnerSuccess"
+          "SocketSuccessListner"
         ],
-        "slug": "addlistenersocketlistnersuccess"
+        "slug": "addlistenersocketsuccesslistner"
       },
       {
         "name": "addListener",
-        "signature": "(eventName: 'socketListnerError', listenerFunc: socketListnerError) => Promise<PluginListenerHandle>",
+        "signature": "(eventName: 'SocketErrorListner', listenerFunc: SocketErrorListner) => Promise<PluginListenerHandle>",
         "parameters": [
           {
             "name": "eventName",
             "docs": "",
-            "type": "'socketListnerError'"
+            "type": "'SocketErrorListner'"
           },
           {
             "name": "listenerFunc",
             "docs": "",
-            "type": "socketListnerError"
+            "type": "SocketErrorListner"
           }
         ],
         "returns": "Promise<PluginListenerHandle>",
@@ -67,9 +67,9 @@
         "docs": "",
         "complexTypes": [
           "PluginListenerHandle",
-          "socketListnerError"
+          "SocketErrorListner"
         ],
-        "slug": "addlistenersocketlistnererror"
+        "slug": "addlistenersocketerrorlistner"
       }
     ],
     "properties": []
@@ -118,8 +118,8 @@
   "enums": [],
   "typeAliases": [
     {
-      "name": "socketListnerSuccess",
-      "slug": "socketlistnersuccess",
+      "name": "SocketSuccessListner",
+      "slug": "socketsuccesslistner",
       "docs": "",
       "types": [
         {
@@ -129,8 +129,8 @@
       ]
     },
     {
-      "name": "socketListnerError",
-      "slug": "socketlistnererror",
+      "name": "SocketErrorListner",
+      "slug": "socketerrorlistner",
       "docs": "",
       "types": [
         {

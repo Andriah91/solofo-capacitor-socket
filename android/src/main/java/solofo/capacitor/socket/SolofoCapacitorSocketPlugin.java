@@ -24,13 +24,12 @@ public class SolofoCapacitorSocketPlugin extends Plugin {
             BufferedReader reader = new BufferedReader(new InputStreamReader(socketClient.getInputStream()));
             String serverMsg;
             while ((serverMsg = reader.readLine()) != null) {
-                System.out.println("Client: " + serverMsg);
-                notifyListeners("socketListnerSuccess", new JSObject().put("result", serverMsg), true);
+                notifyListeners("SocketSuccessListner", new JSObject().put("result", serverMsg), true);
             }
 
         } catch (Exception e) {
             e.printStackTrace();
-            notifyListeners("socketListnerError", new JSObject().put("error", e.getMessage()), true);
+            notifyListeners("SocketErrorListner", new JSObject().put("error", e.getMessage()), true);
         }
 
     }

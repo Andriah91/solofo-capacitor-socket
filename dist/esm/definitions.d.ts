@@ -1,10 +1,10 @@
 import type { PluginListenerHandle } from '@capacitor/core';
-export declare type socketListnerSuccess = (resultScan: any) => void;
-export declare type socketListnerError = (resultScan: any) => void;
+export declare type SocketSuccessListner = (resultScan: any) => void;
+export declare type SocketErrorListner = (resultScan: any) => void;
 export interface SolofoCapacitorSocketPlugin {
     Open(option: SocketOption): void;
-    addListener(eventName: 'socketListnerSuccess', listenerFunc: socketListnerSuccess): Promise<PluginListenerHandle>;
-    addListener(eventName: 'socketListnerError', listenerFunc: socketListnerError): Promise<PluginListenerHandle>;
+    addListener(eventName: 'SocketSuccessListner', listenerFunc: SocketSuccessListner): Promise<PluginListenerHandle>;
+    addListener(eventName: 'SocketErrorListner', listenerFunc: SocketErrorListner): Promise<PluginListenerHandle>;
 }
 export interface SocketOption {
     host: string;
