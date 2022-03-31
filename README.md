@@ -17,6 +17,7 @@ npx cap sync
 * [`close()`](#close)
 * [`addListener('SocketSuccessListner', ...)`](#addlistenersocketsuccesslistner)
 * [`addListener('SocketErrorListner', ...)`](#addlistenersocketerrorlistner)
+* [`addListener('SocketClosedListner', ...)`](#addlistenersocketclosedlistner)
 * [Interfaces](#interfaces)
 * [Type Aliases](#type-aliases)
 
@@ -73,6 +74,22 @@ addListener(eventName: 'SocketErrorListner', listenerFunc: SocketErrorListner) =
 | ------------------ | ------------------------------------------------------------------- |
 | **`eventName`**    | <code>'<a href="#socketerrorlistner">SocketErrorListner</a>'</code> |
 | **`listenerFunc`** | <code><a href="#socketerrorlistner">SocketErrorListner</a></code>   |
+
+**Returns:** <code>Promise&lt;<a href="#pluginlistenerhandle">PluginListenerHandle</a>&gt;</code>
+
+--------------------
+
+
+### addListener('SocketClosedListner', ...)
+
+```typescript
+addListener(eventName: 'SocketClosedListner', listenerFunc: SocketErrorListner) => Promise<PluginListenerHandle>
+```
+
+| Param              | Type                                                              |
+| ------------------ | ----------------------------------------------------------------- |
+| **`eventName`**    | <code>'SocketClosedListner'</code>                                |
+| **`listenerFunc`** | <code><a href="#socketerrorlistner">SocketErrorListner</a></code> |
 
 **Returns:** <code>Promise&lt;<a href="#pluginlistenerhandle">PluginListenerHandle</a>&gt;</code>
 

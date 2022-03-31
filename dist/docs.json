@@ -80,6 +80,30 @@
           "SocketErrorListner"
         ],
         "slug": "addlistenersocketerrorlistner"
+      },
+      {
+        "name": "addListener",
+        "signature": "(eventName: 'SocketClosedListner', listenerFunc: SocketErrorListner) => Promise<PluginListenerHandle>",
+        "parameters": [
+          {
+            "name": "eventName",
+            "docs": "",
+            "type": "'SocketClosedListner'"
+          },
+          {
+            "name": "listenerFunc",
+            "docs": "",
+            "type": "SocketErrorListner"
+          }
+        ],
+        "returns": "Promise<PluginListenerHandle>",
+        "tags": [],
+        "docs": "",
+        "complexTypes": [
+          "PluginListenerHandle",
+          "SocketErrorListner"
+        ],
+        "slug": "addlistenersocketclosedlistner"
       }
     ],
     "properties": []

@@ -6,6 +6,7 @@ export interface SolofoCapacitorSocketPlugin {
     close(): void;
     addListener(eventName: 'SocketSuccessListner', listenerFunc: SocketSuccessListner): Promise<PluginListenerHandle>;
     addListener(eventName: 'SocketErrorListner', listenerFunc: SocketErrorListner): Promise<PluginListenerHandle>;
+    addListener(eventName: 'SocketClosedListner', listenerFunc: SocketErrorListner): Promise<PluginListenerHandle>;
 }
 export interface SocketOption {
     host: string;
