@@ -14,25 +14,27 @@ import java.net.Socket;
 public class SolofoCapacitorSocketPlugin extends Plugin {
 
     Socket socketClient;
+    String host;
+    Integer port;
+    BufferedReader reader;
 
     @PluginMethod
     public void open(PluginCall call) {
-        String host = call.getString("host");
-        Integer port = call.getInt("port");
-
+        host = call.getString("host");
+        port = call.getInt("port");
         try {
             socketClient = new Socket(host, port);
             System.out.println("Client: " + "Connection Established");
-            BufferedReader reader = new BufferedReader(new InputStreamReader(socketClient.getInputStream()));
+            reader = new BufferedReader(new InputStreamReader(socketClient.getInputStream()));
             String serverMsg;
             while ((serverMsg = reader.readLine()) != null) {
                 if(serverMsg.indexOf("GGA") >= 0 ) {
-                    String[] result = serverMsg.split(",");
-                    JSObject response = new JSObject();
-                    response.put("Z_EGM_GGA", result[9]);
-                    response.put("N_EGM_GGA", result[11]);
-                    response.put("POS", result[6]);
-                    notifyListeners("SocketSuccessListner", response, true);
+                String[] result = serverMsg.split(",");
+                JSObject response = new JSObject();
+                response.put("Z_EGM_GGA", result[9]);
+                response.put("N_EGM_GGA", result[11]);
+                response.put("POS", result[6]);
+                notifyListeners("SocketSuccessListner", response, false);
                 }
             }
 
@@ -44,12 +46,12 @@ public class SolofoCapacitorSocketPlugin extends Plugin {
     @PluginMethod
     public void close(){
         try {
+            reader.close();
             socketClient.close();
+            notifyListeners("SocketClosedListner", response, false);
         }catch (Exception e){
 
         }
     }
-
-
 
 }
