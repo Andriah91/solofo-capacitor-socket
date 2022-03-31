@@ -105,6 +105,7 @@ addListener(eventName: 'SocketClosedListner', listenerFunc: SocketErrorListner) 
 | ---------- | ------------------- |
 | **`host`** | <code>string</code> |
 | **`port`** | <code>number</code> |
+| **`stop`** | <code>number</code> |
 
 
 #### PluginListenerHandle

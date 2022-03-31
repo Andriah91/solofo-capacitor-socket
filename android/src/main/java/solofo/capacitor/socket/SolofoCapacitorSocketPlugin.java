@@ -22,24 +22,25 @@ public class SolofoCapacitorSocketPlugin extends Plugin {
     public void open(PluginCall call) {
         host = call.getString("host");
         port = call.getInt("port");
+        Intger close = call.getInt("close");
         try {
             socketClient = new Socket(host, port);
             System.out.println("Client: " + "Connection Established");
             reader = new BufferedReader(new InputStreamReader(socketClient.getInputStream()));
             String serverMsg;
-            while ((serverMsg = reader.readLine()) != null) {
+            while (close == 1 && (serverMsg = reader.readLine()) != null) {
                 if(serverMsg.indexOf("GGA") >= 0 ) {
-                String[] result = serverMsg.split(",");
-                JSObject response = new JSObject();
-                response.put("Z_EGM_GGA", result[9]);
-                response.put("N_EGM_GGA", result[11]);
-                response.put("POS", result[6]);
-                notifyListeners("SocketSuccessListner", response, false);
+                    String[] result = serverMsg.split(",");
+                    JSObject response = new JSObject();
+                    response.put("Z_EGM_GGA", result[9]);
+                    response.put("N_EGM_GGA", result[11]);
+                    response.put("POS", result[6]);
+                    notifyListeners("SocketSuccessListner", response, false);
                 }
             }
 
         } catch (Exception e) {
-            notifyListeners("SocketErrorListner", new JSObject().put("error", e.getMessage()), true);
+            notifyListeners("SocketErrorListner", new JSObject().put("error", e.getMessage()), falses);
         }
     }
 
@@ -48,7 +49,7 @@ public class SolofoCapacitorSocketPlugin extends Plugin {
         try {
             reader.close();
             socketClient.close();
-            notifyListeners("SocketClosedListner", response, false);
+            notifyListeners("SocketClosedListner", new JSObject().put("error", "1"), false);
         }catch (Exception e){
 
         }

@@ -12,7 +12,8 @@ export interface SolofoCapacitorSocketPlugin {
 
 export interface SocketOption{
   host: string,
-  port: number
+  port: number,
+  stop: number
 }
 
 export interface NMEA_GGA{
